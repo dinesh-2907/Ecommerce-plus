@@ -1,204 +1,347 @@
-# 🛡️ E-Shop Guardian AI
+🛡️ E-Shop Guardian AI
 
-> **AI-Powered Trust & Intelligence Platform for Modern E-Commerce**
+AI-Powered Trust & Intelligence Platform for E-Commerce
 
-E-Shop Guardian AI is an AI-first SaaS platform designed to help e-commerce marketplaces build trust, reduce operational losses, improve seller credibility, simplify warranty management, and provide intelligent business insights through AI-powered workflows.
+E-Shop Guardian AI is a smart e-commerce management platform designed to improve trust, reduce return fraud, manage product warranties, monitor sellers, and provide useful business insights.
 
-Unlike traditional e-commerce platforms, E-Shop Guardian AI is **not another online shopping website**. It is an intelligent platform that integrates with existing marketplaces such as **Amazon, Flipkart, Meesho, Shopify, Myntra, and Ajio** to enhance trust and operational efficiency for buyers, sellers, and marketplace administrators.
+The platform connects customers, sellers, and administrators in one system with real-time order management, warranty tracking, return intelligence, inventory monitoring, and seller trust management.
 
----
+🚀 Features
+👤 Customer
 
-## 📌 Problem Statement
+Secure login and registration
 
-Modern e-commerce platforms face several operational and trust-related challenges that affect both businesses and customers.
+Browse available products
 
-Some of the major problems include:
-- Customers forget product warranty information and struggle to claim warranties.
-- Sellers incur significant losses due to product returns and fraudulent return requests.
-- Duplicate or unverified sellers reduce customer trust.
-- Near-expiry inventory often remains unsold, resulting in revenue loss.
-- Marketplace administrators lack centralized intelligence to monitor trust, inventory, warranties, and operational risks.
+View product details and prices
 
-These problems collectively reduce customer confidence, increase operational costs, and impact marketplace profitability.
+Place orders
 
----
+Track order status
 
-## 💡 Our Solution
+View order history
 
-E-Shop Guardian AI provides an integrated Trust & Intelligence Platform that connects buyers, sellers, and administrators into a single ecosystem.
+Digital warranty management
 
-The platform focuses on:
-- **Warranty Management**: Automated digital warranty generation and tracking.
-- **Return Intelligence**: Fraud risk scoring and dispute management.
-- **Seller Trust**: Verification status, seller metrics, and compliance ratings.
-- **Inventory Intelligence**: Expiry tracking and markdown dynamic forecasting.
-- **Live Order Fulfillment**: Real-time order dispatch and buyer notification pipeline.
+Track warranty expiry
 
-The architecture is built on a production-ready Supabase backend designed to seamlessly support future AI agents.
+Submit warranty claims
 
----
+Request product returns
 
-## 🚀 Key Features
+Return risk analysis
 
-### 👤 Customer Portal (`/customer`)
-- **Secure Authentication**: Real Supabase Auth login & sign-up.
-- **AI Marketplace**: Browse active seller products with real-time stock and prices.
-- **Seamless Purchase Flow**: Single-click order placement with automatic digital warranty generation.
-- **Digital Warranty Center**: Track active cover, days remaining, serial numbers, and file claims.
-- **Return Center**: File return requests with automated risk score calculation and status tracking.
-- **Order History**: Track order lifecycle (`Processing`, `Shipped`, `Delivered`, `Cancelled`).
-- **Real-Time Notifications**: Live updates for order status, warranty claims, and platform alerts.
-- **User Settings**: Update name, phone, address, date of birth, gender, and avatar profile picture.
+Real-time notifications
 
----
+Manage profile and account settings
 
-### 🏪 Seller Portal (`/seller`)
-- **Seller Dashboard**: Revenue summaries, SKU tracking, and sales analytics.
-- **Products Catalog**: Add, edit, and manage marketplace product listings with image URLs and batch expiry dates.
-- **Live Customer Order Fulfillment (`/seller/orders`)**: Real-time feed of orders placed by customers. Dispatch (`Processing` → `Shipped`) and mark items as `Delivered` live without page refreshes.
-- **Inventory Health & Expiry Intel**: Monitor stock velocity, set markdown discount overrides for expiring inventory, and forecast revenue recovery.
-- **Seller Trust Index**: Monitor marketplace compliance score, defect rates, and resolve return dispute cases.
-- **Company Settings**: Update shop name, business details, and seller profile information.
+🏪 Seller
 
----
+Seller dashboard
 
-### 🛡️ Admin Panel (`/admin`)
-- **Platform Executive Dashboard**: Top-level overview of GMV, total active users, verified sellers, and return defect rates.
-- **Users Directory**: Manage platform customers and sellers, update verification status (`Active`, `Suspended`, `Pending Verification`), and adjust trust scores.
-- **AI Insights Engine**: Real-time fraud pattern detection, size-swap anomaly logs, and system risk recommendations.
-- **Admin Settings**: System configuration and profile management.
+Add, edit, and manage products
 
----
+Manage product stock
 
-## 🤖 Planned & Implemented AI Modules
+Manage product expiry dates
 
-Although the current version focuses on delivering a production-ready Supabase backend and complete marketplace workflow, the platform includes built-in AI risk scoring rule engines and is architected for LLM agent integration via OpenRouter / Gemini.
+View customer orders
 
-### 🛡️ Warranty Guardian Agent (Planned)
-- Explain warranty coverage in plain language
-- Automated warranty expiry reminders
-- AI claim verification and instant document understanding
+Update order status
 
-### 🔍 Return Intelligence Agent (Implemented Engine + Planned LLM)
-- Analyze customer return request patterns
-- Predict return fraud risk scores dynamically (Low / Medium / High Risk)
-- Recommend auto-approval or manual vendor inspection to reduce return fraud
+Dispatch and deliver orders
 
-### 🏷️ Smart Dynamic Pricing Agent (Implemented Engine + Planned LLM)
-- Analyze batch expiry dates automatically
-- Recommend dynamic markdowns for near-expiry products
-- Minimize inventory waste and maximize revenue recovery
+Monitor sales and revenue
 
-### ⭐ Seller Trust Agent (Implemented Engine + Planned LLM)
-- Evaluate seller performance and defect trends
-- Calculate dynamic compliance and trust scores (0-100 index)
-- Automatically flag fraudulent or high-complaint merchant accounts
+Track inventory health
 
----
+Manage discounts for products nearing expiry
 
-## 🏗️ Platform Architecture
+View seller trust score
 
-```text
-                    E-Shop Guardian AI
+Manage seller profile
 
-                      React 19 + Vite
-                             │
-                             ▼
-                     React Router DOM v7
-                             │
-                             ▼
-                      Supabase Backend
-       ┌──────────────┬──────────────┬──────────────┐
-       │              │              │              │
-Authentication   PostgreSQL DB   Storage Buckets  Realtime Channels
-       │              │              │              │
-       └──────────────┴──────────────┴──────────────┘
-                             │
-                      Future Integration
-                             │
-                     OpenRouter / Gemini
-                             │
-                    AI Intelligence Layer
-```
+🛡️ Admin
 
----
+Platform dashboard
 
-## 👥 User Roles & Access
+Monitor users
 
-| Role | Access Scope | Key Capabilities |
-| :--- | :--- | :--- |
-| **Customer** | `/customer/*` | Browse marketplace, purchase items, view orders, manage warranties, request returns |
-| **Seller** | `/seller/*` | Product CRUD, live order processing, inventory expiry markdowns, seller trust index |
-| **Admin** | `/admin/*` | Global analytics, user verification management, seller monitoring, AI fraud logs |
+Manage customers and sellers
 
----
+Verify seller accounts
 
-## ⚙️ Technology Stack
+Manage seller status
 
-### Frontend
-- **Framework**: React 19, Vite, TypeScript
-- **Styling**: Tailwind CSS v4, Vanilla CSS Design System Tokens
-- **Icons & UI**: Lucide Icons, Framer Motion
-- **Charts**: Recharts
-- **Routing**: React Router DOM
+Monitor trust scores
 
-### Backend & Infrastructure
-- **Authentication**: Supabase Auth (Email & Password with metadata role assignment)
-- **Database**: Supabase PostgreSQL with Row Level Security (RLS) & `SECURITY DEFINER` helper functions
-- **Realtime**: Supabase Realtime Channels (`products`, `orders`, `notifications`)
-- **Storage**: Supabase Storage Buckets (`product-images`, `avatars`, `invoices`)
+View return and fraud risk information
 
----
+Monitor platform activity
 
-## 🗄️ Database Schema
+View system insights
 
-- **`profiles`**: User profiles (`id`, `email`, `full_name`, `role`, `avatar_url`, `phone`, `city`, `state`, `address`, `dob`, `gender`)
-- **`seller_profiles`**: Merchant shop details (`profile_id`, `shop_name`, `gst_number`, `verification_status`, `seller_trust_score`)
-- **`products`**: Product listings (`seller_id`, `name`, `description`, `category`, `price`, `brand`, `image_url`, `stock`, `rating`, `expiry_date`, `status`)
-- **`orders`**: Customer purchases (`buyer_id`, `product_id`, `seller_id`, `quantity`, `total_amount`, `order_date`, `order_status`, `warranty_status`, `return_status`)
-- **`warranties`**: Digital warranties (`order_id`, `product_id`, `buyer_id`, `product_name`, `brand`, `invoice_no`, `purchase_date`, `duration_months`, `expiry_date`, `status`, `serial_no`, `days_remaining`, `timeline`)
-- **`return_requests`**: Return filings (`order_id`, `buyer_id`, `customer_name`, `product_name`, `product_price`, `reason`, `request_date`, `status`, `risk_score`, `risk_level`, `ai_confidence`, `ai_recommendation`, `timeline`)
-- **`notifications`**: System notifications (`user_id`, `title`, `description`, `type`, `is_read`, `role`)
+🤖 AI Features
 
----
+The platform includes rule-based intelligence and is designed for future AI/LLM integration.
 
-## 🔒 Security & RLS
+Return Intelligence
 
-- **Role-Based Routing**: Protected layouts for `/customer`, `/seller`, `/admin`.
-- **Row Level Security (RLS)**: PostgreSQL policies with `SECURITY DEFINER` functions (`is_admin()`, `is_seller()`) to avoid infinite recursion loops.
-- **Foreign Key Disambiguation**: Explicit constraint embedding (`orders!seller_id`) for multi-relationship PostgREST joins.
+Analyze return requests
 
----
+Calculate return risk scores
 
-## 💻 Local Setup Instructions
+Identify potentially suspicious returns
 
-### 1. Clone the Repository
-```bash
-git clone https://github.com/sivaasp5228/E-Shop-Guardian-AI.git
-cd E-Shop-Guardian-AI
-```
+Classify returns as Low, Medium, or High Risk
 
-### 2. Install Dependencies
-```bash
+Provide recommendations for return processing
+
+Smart Pricing
+
+Monitor product expiry dates
+
+Identify products nearing expiry
+
+Recommend discounts
+
+Help reduce inventory waste
+
+Improve potential revenue recovery
+
+Seller Trust
+
+Monitor seller performance
+
+Calculate seller trust scores
+
+Track complaints and defects
+
+Identify sellers requiring additional verification
+
+Warranty Guardian
+
+Planned AI capabilities include:
+
+Explain warranty coverage
+
+Send warranty expiry reminders
+
+Analyze warranty documents
+
+Assist with warranty claims
+
+🏗️ Architecture
+                E-Shop Guardian AI
+
+                       React
+                        │
+                        ▼
+                  React Router
+                        │
+                        ▼
+                    Supabase
+        ┌───────────────┼───────────────┐
+        │               │               │
+   Authentication   PostgreSQL       Storage
+        │               │               │
+        └───────────────┼───────────────┘
+                        │
+                     Realtime
+                        │
+                        ▼
+                  AI Intelligence
+
+🛠️ Technology Stack
+Frontend
+
+React
+
+TypeScript
+
+Vite
+
+Tailwind CSS
+
+React Router
+
+Framer Motion
+
+Lucide Icons
+
+Recharts
+
+Backend
+
+Supabase
+
+PostgreSQL
+
+Supabase Authentication
+
+Supabase Storage
+
+Supabase Realtime
+
+Row Level Security (RLS)
+
+👥 User Roles
+Role	Main Access
+Customer	Products, orders, returns, warranties, profile
+Seller	Products, inventory, orders, sales, seller trust
+Admin	Users, sellers, analytics, trust and risk monitoring
+🗄️ Main Database Tables
+Profiles
+
+Stores customer, seller, and admin profile information.
+
+Seller Profiles
+
+Stores seller business details, verification status, and trust score.
+
+Products
+
+Stores product information such as:
+
+Product name
+
+Description
+
+Price
+
+Category
+
+Brand
+
+Stock
+
+Image
+
+Expiry date
+
+Status
+
+Orders
+
+Stores customer purchases and order status.
+
+Warranties
+
+Stores digital warranty information including:
+
+Product
+
+Purchase date
+
+Warranty duration
+
+Expiry date
+
+Serial number
+
+Warranty status
+
+Return Requests
+
+Stores return requests and risk analysis.
+
+Notifications
+
+Stores real-time notifications for users.
+
+🔒 Security
+
+The platform uses:
+
+Supabase Authentication
+
+PostgreSQL Row Level Security
+
+Role-based access
+
+Protected routes
+
+Secure database policies
+
+SECURITY DEFINER helper functions
+
+Customers, sellers, and administrators only have access to the data and features permitted for their roles.
+
+💻 Getting Started
+1. Clone the Repository
+git clone https://github.com/dinesh-2907/Ecommerce-plus.git
+cd Ecommerce-plus
+
+2. Install Dependencies
 npm install
-```
 
-### 3. Setup Environment Variables
-Create a `.env.local` file in the root directory:
-```env
+3. Configure Environment Variables
+
+Create a .env.local file:
+
 VITE_SUPABASE_URL=YOUR_SUPABASE_PROJECT_URL
 VITE_SUPABASE_ANON_KEY=YOUR_SUPABASE_ANON_KEY
-```
 
-### 4. Database Initialization
-Run the complete SQL schema provided in [`supabase/schema.sql`](supabase/schema.sql) in your Supabase SQL Editor.
 
-### 5. Run Development Server
-```bash
+Replace the values with your Supabase project credentials.
+
+4. Setup Database
+
+Run the SQL schema from:
+
+supabase/schema.sql
+
+
+in the Supabase SQL Editor.
+
+5. Start the Project
 npm run dev
-```
 
-### 6. Build for Production
-```bash
+6. Build for Production
 npm run build
 
+📁 Project Structure
+Ecommerce-plus/
+│
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── layouts/
+│   ├── services/
+│   └── ...
+│
+├── supabase/
+│   └── schema.sql
+│
+├── public/
+├── package.json
+└── README.md
+
+🎯 Project Goal
+
+E-Shop Guardian AI aims to make e-commerce platforms more secure, transparent, and efficient by combining traditional marketplace functionality with intelligent automation.
+
+The main goals are:
+
+Reduce return fraud
+
+Improve seller trust
+
+Simplify warranty management
+
+Reduce inventory waste
+
+Improve order management
+
+Provide useful business insights
+
+Create a better experience for customers and sellers
+
+📌 Repository
+
+GitHub:
+{"fallbackMarkdown":"E-Shop Guardian AI Repository","reference":{"matched_text":"","prefix":null,"start_idx":5915,"end_idx":5996,"safe_urls":[],"refs":[],"alt":"E-Shop Guardian AI Repository","prompt_text":"E-Shop Guardian AI Repository","type":"url","item":{"title":"E-Shop Guardian AI Repository","url":"https://github.com/dinesh-2907/Ecommerce-plus?utm_source=chatgpt.com","attribution":"github.com","pub_date":null,"snippet":null,"attribution_segments":null,"supporting_websites":null,"refs":[],"hue":null,"attributions":null},"title":"E-Shop Guardian AI Repository","layout":null,"logo":null},"showLoginRequiredCard":false}
+
+📄 License
+
+This project is developed for educational and development purposes.
