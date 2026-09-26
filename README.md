@@ -337,11 +337,3 @@ Provide useful business insights
 
 Create a better experience for customers and sellers
 
-📌 Repository
-
-GitHub:
-{"fallbackMarkdown":"E-Shop Guardian AI Repository","reference":{"matched_text":"","prefix":null,"start_idx":5915,"end_idx":5996,"safe_urls":[],"refs":[],"alt":"E-Shop Guardian AI Repository","prompt_text":"E-Shop Guardian AI Repository","type":"url","item":{"title":"E-Shop Guardian AI Repository","url":"https://github.com/dinesh-2907/Ecommerce-plus?utm_source=chatgpt.com","attribution":"github.com","pub_date":null,"snippet":null,"attribution_segments":null,"supporting_websites":null,"refs":[],"hue":null,"attributions":null},"title":"E-Shop Guardian AI Repository","layout":null,"logo":null},"showLoginRequiredCard":false}
-
-📄 License
-
-This project is developed for educational and development purposes.
