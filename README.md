@@ -201,18 +201,4 @@ npm run dev
 ### 6. Build for Production
 ```bash
 npm run build
-```
 
----
-
-## 🏆 Hackathon Details
-
-- **Event**: Idea2Impact Offline Hackathon 2026
-- **Theme**: AI for Industry & Public Impact
-- **Project**: E-Shop Guardian AI
-
----
-
-## 👨‍💻 Team
-
-Built with ❤️ for the **Idea2Impact Hackathon 2026**.
